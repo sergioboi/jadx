@@ -40,14 +40,17 @@ buildCache {
 	remote<HttpBuildCache> {
 		// On CI it's easiest to provide Env Vars
 		// On local macOS it's easier to provide ~/.gradle/gradle.properties for consistency between Terminal & IDE
-		val remoteUrl: String? = "JADX_GRADLE_REMOTE_CACHE_URL"
-			.let { System.getenv(it) ?: providers.gradleProperty(it).orNull }
+		val remoteUrl: String? =
+			"JADX_GRADLE_REMOTE_CACHE_URL"
+				.let { System.getenv(it) ?: providers.gradleProperty(it).orNull }
 
-		val user: String? = "JADX_GRADLE_REMOTE_CACHE_USER"
-			.let { System.getenv(it) ?: providers.gradleProperty(it).orNull }
+		val user: String? =
+			"JADX_GRADLE_REMOTE_CACHE_USER"
+				.let { System.getenv(it) ?: providers.gradleProperty(it).orNull }
 
-		val token: String? = "JADX_GRADLE_REMOTE_CACHE_TOKEN"
-			.let { System.getenv(it) ?: providers.gradleProperty(it).orNull }
+		val token: String? =
+			"JADX_GRADLE_REMOTE_CACHE_TOKEN"
+				.let { System.getenv(it) ?: providers.gradleProperty(it).orNull }
 
 		if (remoteUrl != null && user != null && token != null) {
 			isEnabled = true
