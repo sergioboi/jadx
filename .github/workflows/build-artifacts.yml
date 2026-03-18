@@ -3,6 +3,11 @@ name: Build Artifacts
 on:
   push:
     branches: [ master, build-test ]
+    
+env:
+  JADX_GRADLE_REMOTE_CACHE_URL: ${{ secrets.JADX_GRADLE_REMOTE_CACHE_URL }}
+  JADX_GRADLE_REMOTE_CACHE_USER: ${{ secrets.JADX_GRADLE_REMOTE_CACHE_USER }}
+  JADX_GRADLE_REMOTE_CACHE_TOKEN: ${{ secrets.JADX_GRADLE_REMOTE_CACHE_TOKEN }}
 
 jobs:
   build:
