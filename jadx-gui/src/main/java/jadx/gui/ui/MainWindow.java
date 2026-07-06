@@ -532,6 +532,7 @@ public class MainWindow extends JFrame {
 	}
 
 	private void loadFiles(Runnable onFinish) {
+		project.verifyFiles();
 		if (project.getFilePaths().isEmpty()) {
 			tabsController.selectTab(new StartPageNode());
 			onFinish.run();
