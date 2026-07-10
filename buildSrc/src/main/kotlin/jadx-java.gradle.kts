@@ -23,7 +23,7 @@ dependencies {
 	implementation("org.slf4j:slf4j-api:2.0.18")
 	compileOnly("org.jetbrains:annotations:26.1.0")
 
-	testImplementation("ch.qos.logback:logback-classic:1.5.37")
+	testImplementation("ch.qos.logback:logback-classic:1.5.38")
 	testImplementation("org.assertj:assertj-core:3.27.7")
 
 	testImplementation("org.junit.jupiter:junit-jupiter:5.13.3")
